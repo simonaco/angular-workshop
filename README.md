@@ -45,10 +45,19 @@ Tasks:
 
 4.  Wrap everything in a main tag
 
-5.  Implement component ngOnInit, ngOnChanges, ngOnDestroy lifecycle hooks and log method name to the console
+5.  Make font red if rating is less than 7.5
 
-And then switch to the next branch, templating:
+6.  Display place only if rating is greater than 7.5
+
+Don't forget to commit all your changes using:
 
 ```console
-git checkout templating
+git add .
+git commit -m "Templating rocks"
+```
+
+And then switch to the next branch, components-communication:
+
+```console
+git checkout components-communication
 ```
