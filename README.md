@@ -1,27 +1,54 @@
 # TravelApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+In this session we'll learn the essentials about templates in angular:
 
-## Development server
+1.  Understand what are directives and differences between directives and components
+2.  NgFor directive
+3.  NgIf directive
+4.  NgClass directive
+5.  Structural directives vs Attribute directives
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Tasks:
 
-## Code scaffolding
+1.  Go to the component we just created in the previous exercise, named place. Save the array in places.json in a variable called places.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2.  In your component's template display details for first trip:
 
-## Build
+```html
+  <div class="places">
+    <p class="top">Endava's Places</p>
+    <h1>name</h1>
+    <p>
+      <strong>Rating: rating</strong>
+    </p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    <div class="main-img"></div>
+    <p>description</p>
+  </div>
+```
 
-## Running unit tests
+3.  List all places in a sidebar using \*ngFor:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```html
+ <aside class="sidebar">
+    <h3>Other Trips</h3>
+    <div class="location">
+      <img src alt=name />
+      <p class="top">
+        <strong>name</strong>
+      </p>
+      <p>description</p>
+      <hr />
+    </div>
+  </aside>
+```
 
-## Running end-to-end tests
+4.  Wrap everything in a main tag
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+5.  Implement component ngOnInit, ngOnChanges, ngOnDestroy lifecycle hooks and log method name to the console
 
-## Further help
+And then switch to the next branch, templating:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```console
+git checkout templating
+```
