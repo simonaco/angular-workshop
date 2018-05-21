@@ -2,17 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PlaceComponent } from './place/place.component';
+import { PlacesComponent } from './places/places.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PlaceComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, PlacesComponent],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

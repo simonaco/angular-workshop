@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-place',
-  templateUrl: './place.component.html',
-  styleUrls: ['./place.component.scss']
+  selector: 'app-places',
+  templateUrl: './places.component.html',
+  styleUrls: ['./places.component.scss']
 })
-export class PlaceComponent implements OnInit {
+export class PlacesComponent implements OnInit {
   places;
   constructor() {
     this.places = [
