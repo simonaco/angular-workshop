@@ -1,3 +1,23 @@
-<p>
-  place works!
-</p>
+<main>
+  <div class="places">
+    <p class="top">Endava's Places</p>
+    <h1>{{ places[0].name }}</h1>
+    <p>
+      <strong>Rating: {{ places[0].rating }}</strong>
+    </p>
+
+    <div class="main-img"></div>
+    <p>{{ places[0].description }}</p>
+  </div>
+  <aside class="sidebar">
+    <h3>Other Trips</h3>
+    <div *ngFor="let place of places" class="location">
+      <img [src]="place.img" [alt]="place.name" />
+      <p class="top">
+        <strong>{{ place.name }}</strong>
+      </p>
+      <p>{{ place.description }}</p>
+      <hr />
+    </div>
+  </aside>
+</main>
