@@ -1,13 +1,13 @@
 <main>
   <div class="places">
     <p class="top">Endava's Places</p>
-    <h1>{{ places[0].name }}</h1>
+    <h1>{{ places[0]?.name }}</h1>
     <p>
-      <strong>Rating: {{ places[0].rating }}</strong>
+      <strong>Rating: {{ places[0]?.rating }}</strong>
     </p>
 
     <div class="main-img"></div>
-    <p>{{ places[0].description }}</p>
+    <p>{{ places[0]?.description }}</p>
   </div>
   <aside class="sidebar">
     <h3>Other Trips</h3>
