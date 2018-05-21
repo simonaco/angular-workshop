@@ -11,13 +11,7 @@
   </div>
   <aside class="sidebar">
     <h3>Other Trips</h3>
-    <div *ngFor="let place of places" class="location">
-      <img [src]="place.img" [alt]="place.name" />
-      <p class="top">
-        <strong>{{ place.name }}</strong>
-      </p>
-      <p>{{ place.description }}</p>
-      <hr />
-    </div>
+    <app-place *ngFor="let item of places" class="location" [place]=item (edit)="handleEdit($event)" (remove)="handleRemove($event)">
+    </app-place>
   </aside>
 </main>

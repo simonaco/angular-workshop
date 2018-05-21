@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Place } from '../place';
 
 @Component({
   selector: 'app-places',
@@ -40,4 +41,21 @@ export class PlacesComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  handleRemove(event: any) {
+    console.log(event);
+    this.places = this.places.filter((place: Place) => {
+      return place.name !== event.name;
+    });
+  }
+
+  handleEdit(event: Place) {
+    console.log(event);
+    this.places = this.places.map((place: Place) => {
+      if (place.name === event.name) {
+        place = Object.assign({}, place, event);
+      }
+      return place;
+    });
+  }
 }

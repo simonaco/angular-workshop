@@ -8,6 +8,12 @@ In this session we'll learn the essentials about component communitcation in ang
 
 Tasks:
 
+1.  Refactor places template to display each place using a component. The new component, called place will receive properties as input from parent component which is places
+
+2.  Add edit functionality to place.name
+3.  Add remove functionality to place
+4.  Emit events from place to parent component and update current state
+
 Make sure to commit your changes using:
 
 ```console
