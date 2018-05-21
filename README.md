@@ -14,3 +14,9 @@ Tasks:
 
 1.  Generate a new component named 'place' using documentation at https://github.com/angular/angular-cli/wiki/generate-component . Use flag to skip generating spec files. First, use flags to generate component with inline template and inline style. Then move template and styles to separate file.
 2.  Implement component ngOnInit, ngOnChanges, ngOnDestroy lifecycle hooks and log method name to the console
+
+And then switch to the next branch, templating:
+
+```console
+git checkout templating
+```
