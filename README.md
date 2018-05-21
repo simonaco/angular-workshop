@@ -12,7 +12,7 @@ Tasks:
 
 2.  Add edit functionality to place.name
 3.  Add remove functionality to place
-4.  Emit events from place to parent component and update current state
+4.  Emit events from place to parent component and update array of places
 
 Make sure to commit your changes using:
 
