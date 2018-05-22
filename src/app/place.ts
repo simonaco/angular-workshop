@@ -4,4 +4,5 @@ export class Place {
   rating: string;
   description: string;
   img: string;
+  stars: number;
 }

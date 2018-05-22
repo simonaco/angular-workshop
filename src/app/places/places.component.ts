@@ -9,8 +9,9 @@ import { PlacesService } from '../places.service';
 })
 export class PlacesComponent implements OnInit {
   places = [];
+  newPlace = false;
   constructor(private placesService: PlacesService) {
-    placesService.getPlaces().subscribe(places => (this.places = places));
+    this.placesService.getPlaces().subscribe(places => (this.places = places));
   }
 
   ngOnInit() {}
@@ -33,5 +34,16 @@ export class PlacesComponent implements OnInit {
         return place;
       });
     });
+  }
+  addPlace() {
+    this.newPlace = true;
+  }
+  onCreatePlace(event: Place) {
+    this.placesService
+      .createPlace(event)
+      .subscribe((data: Place) => {
+        this.placesService.getPlaces().subscribe(places => (this.places = places));
+        this.newPlace = false;
+      });
   }
 }

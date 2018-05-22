@@ -20,6 +20,12 @@ export class PlacesService {
       .pipe(map(res => res.json()));
   }
 
+  createPlace(place: Place): Observable<Place> {
+    return this.http
+      .post(`${PLACES_API}/place`, place)
+      .pipe(map(res => res.json()));
+  }
+
   removePlace(place: Place): Observable<Place> {
     return this.http
       .delete(`${PLACES_API}/place/${place.id}`)
