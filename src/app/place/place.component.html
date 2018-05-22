@@ -1,0 +1,19 @@
+<img [src]="place.img" [alt]="place.name" />
+<div *ngIf="editing; else viewOnly">
+  <input type="text" [value]="place.name" (input)="onNameChange(name.value)" #name />
+</div>
+<ng-template #viewOnly>
+  <p class="top">
+    <strong>{{ place.name }}</strong>
+  </p>
+</ng-template>
+
+<p>{{ place.description }}</p>
+
+<button (click)="toggleEdit()">
+  {{ editing ? 'Done' : 'Edit' }}
+</button>
+<button (click)="onRemove()">
+  Remove
+</button>
+<hr />

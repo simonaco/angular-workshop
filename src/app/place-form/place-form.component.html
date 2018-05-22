@@ -1,0 +1,45 @@
+<div class="places">
+  <p class="top">Endava's Places</p>
+  <form #form="ngForm" (ngSubmit)="handleSubmit(form.value, form.valid)" novalidate>
+    <div>
+      Place name:
+      <input type="text" name="name" required #placeName="ngModel" [ngModel]="place?.name" />
+      <div *ngIf="placeName.errors?.required && placeName.dirty" class="error">
+        Place name is required
+      </div>
+    </div>
+
+    <div>
+      Place description:
+      <textarea name="description" required #placeDesc="ngModel" [ngModel]="place?.description"></textarea>
+      <div *ngIf="placeDesc.errors?.required && placeDesc.dirty" class="error">
+        Place description is required
+      </div>
+    </div>
+    <div>
+      Place image:
+      <input type="text" name="img" required #placeImg="ngModel" [ngModel]="place?.img" />
+      <div *ngIf="placeImg.errors?.required && placeImg.dirty" class="error">
+        Place image is required
+      </div>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" name="rated" [ngModel]="rated" (ngModelChange)="toggleRating($event)" /> {{ rated ? "Yes" : "No" }}
+      </label>
+      <div *ngIf="form.value.rated">
+        Place rating:
+        <input type="number" name="rating" [ngModel]="place?.rating" />
+      </div>
+    </div>
+    <div>
+      Stars:
+      <select name="stars" [ngModel]="place?.stars">
+        <option *ngFor="let star of stars" [ngValue]="star">
+          {{ star }}
+        </option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Create Place</button>
+  </form>
+</div>

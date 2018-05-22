@@ -1,0 +1,29 @@
+<main>
+  <div class="places" *ngIf="!newPlace; else updating">
+    <p class="top">Endava's Places</p>
+    <h1>{{ places[0]?.name }}</h1>
+    <p>
+      <strong>Rating: {{ places[0]?.rating }}</strong>
+    </p>
+
+    <div class="main-img"></div>
+    <p>{{ places[0]?.description }}</p>
+    <button (click)="addPlace()">
+        New
+    </button>
+  </div>
+  <ng-template #updating>
+    <app-place-form
+      (create)="onCreatePlace($event)">
+    </app-place-form>
+  </ng-template>
+
+
+
+  <aside class="sidebar">
+    <h3>Other Trips</h3>
+    <app-place *ngFor="let item of places" class="location" [place]=item (edit)="handleEdit($event)" (remove)="handleRemove($event)">
+    </app-place>
+  </aside>
+
+</main>

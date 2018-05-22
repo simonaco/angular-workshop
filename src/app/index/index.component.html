@@ -1,0 +1,18 @@
+<main>
+  <div class="places" ref="places">
+    <div *ngFor="let place of places" class="location">
+      <img [src]="place.img" [alt]="place.name" />
+      <h2>{{ place.name }}</h2>
+      <p>
+        <strong>Rating: {{ place.rating }}</strong>
+      </p>
+      <p>{{ place.description }}</p>
+      <hr />
+    </div>
+  </div>
+  <div class="mapcontain" id="mapcontain">
+    <p>
+      Checked in at Honolulu location
+    </p>
+  </div>
+</main>
