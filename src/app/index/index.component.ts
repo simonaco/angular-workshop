@@ -9,19 +9,19 @@ import { PlacesService } from '../places.service';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
-  places;
+  places = [];
   users;
   page;
   constructor(
     private store: StoreService,
     private userService: UserService,
-    private placeService: PlacesService
+    private placesService: PlacesService
   ) {
     this.store.getStreamPage().subscribe(val => {
       this.page = val;
     });
     this.users = this.userService.getUsers();
-    this.places = this.placeService.getPlaces();
+    this.placesService.getPlaces().subscribe(places => (this.places = places));
   }
 
   ngOnInit() {

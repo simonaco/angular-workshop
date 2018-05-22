@@ -1,0 +1,22 @@
+<header>
+  <div name="bk" class="bk-img">
+    <div *ngIf="page === 'index'" class="header-img1" [@flyInOut]></div>
+    <div *ngIf="page === 'place'" class="header-img2" [@flyInOut]></div>
+    <div *ngIf="page === 'group'" class="header-img3" [@flyInOut]></div>
+  </div>
+  <div class="nav-wrapper">
+    <nav>
+      <ul>
+        <a routerLink="/" routerLinkActive="router-link-active">
+          <li>{{ selectedUser.name | firstName }}'s Home</li>
+        </a>
+        <a routerLink="/places" routerLinkActive="router-link-active">
+          <li>{{ selectedUser.name | firstName }}'s Places</li>
+        </a>
+        <a routerLink="/group" routerLinkActive="router-link-active">
+          <li>{{ selectedUser.name | firstName }}'s Group Trips</li>
+        </a>
+      </ul>
+    </nav>
+  </div>
+</header>
