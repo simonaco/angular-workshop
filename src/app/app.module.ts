@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { PlacesComponent } from './places/places.component';
 import { PlaceComponent } from './place/place.component';
 import { PlaceFormComponent } from './place-form/place-form.component';
-
+import { GroupComponent } from './group/group.component';
+import { IndexComponent } from './index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
     PlacesComponent,
     PlaceComponent,
-    PlaceFormComponent
+    PlaceFormComponent,
+    GroupComponent,
+    IndexComponent
   ],
   imports: [BrowserModule, HttpModule, FormsModule],
   providers: [],
