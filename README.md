@@ -2,36 +2,36 @@
 
 In this session we'll learn the essentials about forms in angular:
 
-1.  FormsModule
-2.  Template driven forms vs reactive forms
-3.  Validators
+1.  RouterModule
+2.  RouterOutlet
 
 Tasks:
 
-1.  Import FormsModule from '@angular/forms'
-2.  Generate a new component place-form for your form. Use the spec false flag.
-3.  Add create place method in places.service
-4.  Create a new form :
-    name - input, required
-    desc - text area, required
-    rating - checkbox + input (number), if rated (default false) set rating  
-    stars - select box with number from 1 to 5
-    img - input
-5.  Display conditionally view product/edit product
-
-Optional:
-
-1.  Add Angular Material to project by following https://material.angular.io/guide/getting-started
-2.  Reimplement forms using Angular material
+1.  Import RouterModule from '@angular/router'
+2.  Create a component not-found and add message "These are not the droid your are looking for' :D
+3. Create array of routes that navigate to:
+/places - PlacesComponent
+/group - GroupComponent
+/index - IndexComponent 
+everything else to NotFoundComponent
+4.  Create a component named footer with inline template, no tests, Use style from https://github.com/simonaco/travel-app/blob/master/src/app/footer/footer.component.css .Replace generated template with:
+```html
+<footer>
+    Made by
+    <a href="<replace with link to your social profile>" target="_blank">your name</a>. This project is open source, visit
+    <a href="https://github.com/simonaco/workshop" target="_blank">the repo.</a>
+  </footer>
+```
+5. Instead of displaying placeForm component conditionally, add a new route and use router to redirect
 
 Make sure to commit your changes using:
 
 ```console
 git add .
-git commit -m "Forms are funky"
+git commit -m "Five routers walk into a bar. Who gets the car keys? The Designated Router."
 ```
 
-And then switch to the next branch, forms:
+If you just want to see results, switch to the next branch, final:
 
 ```console
 git checkout final
