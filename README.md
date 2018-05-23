@@ -34,5 +34,5 @@ git commit -m "Forms are funky"
 And then switch to the next branch, forms:
 
 ```console
-git checkout final
+git checkout routing
 ```
