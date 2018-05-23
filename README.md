@@ -14,7 +14,7 @@ Tasks:
 4.  Create a new form :
     name - input, required
     desc - text area, required
-    rating - checkbox + input (number), if rated (default false) set rating  
+    rating - checkbox + input (number), if rated (default false) set rating
     stars - select box with number from 1 to 5
     img - input
 5.  Display conditionally view product/edit product
