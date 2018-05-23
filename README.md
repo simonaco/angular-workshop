@@ -10,7 +10,7 @@ In this session we'll learn the essentials about templates in angular:
 
 Tasks:
 
-1.  Go to the component we just created in the previous exercise, named place. Save the array in places.json in a variable called places.
+1.  Go to the component we just created in the previous exercise, named places. Save the array in places.json in a variable called places.
 
 2.  In your component's template display details for first trip:
 
