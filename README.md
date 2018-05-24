@@ -1,40 +1,38 @@
 # TravelApp
 
-In this session we'll learn the essentials about forms in angular:
+This workshop is an intro to Angular. To follow along make sure to checkout branches in the following order:
 
-1.  RouterModule
-2.  RouterOutlet
+1. es6-typescript
+2. components
+3. templating
+4. components-communication
+5. services
+6. forms
+7. routing
+8. final
 
-Tasks:
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
-1.  Import RouterModule from '@angular/router'
-2.  Create a component not-found and add message "These are not the droid your are looking for' :D
-3.  Create array of routes that navigate to:
-    /places - PlacesComponent
-    /group - GroupComponent
-    /index - IndexComponent
-    everything else to NotFoundComponent
-4.  Create a component named footer with inline template, no tests, Use style from https://github.com/simonaco/travel-app/blob/master/src/app/footer/footer.component.css .Replace generated template with:
+## Development server
 
-```html
-<footer>
-    Made by
-    <a href="<replace with link to your social profile>" target="_blank">your name</a>. This project is open source, visit
-    <a href="https://github.com/simonaco/workshop" target="_blank">the repo.</a>
-  </footer>
-```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-5.  Instead of displaying placeForm component conditionally, add a new route and use router to redirect
+## Code scaffolding
 
-Make sure to commit your changes using:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```console
-git add .
-git commit -m "Five routers walk into a bar. Who gets the car keys? The Designated Router."
-```
+## Build
 
-If you just want to see results, switch to the next branch, final:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-```console
-git checkout final
-```
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
