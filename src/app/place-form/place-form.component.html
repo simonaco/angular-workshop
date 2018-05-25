@@ -25,7 +25,7 @@
     </div>
     <div>
       <label>
-        <input type="checkbox" name="rated" [ngModel]="rated" (ngModelChange)="toggleRating($event)" /> {{ rated ? "Yes" : "No" }}
+        <input type="checkbox" name="rated" [ngModel]="rated" (ngModelChange)="toggleRating()" /> {{ rated ? "Yes" : "No" }}
       </label>
       <div *ngIf="form.value.rated">
         Place rating:
