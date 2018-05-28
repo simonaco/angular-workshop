@@ -14,6 +14,8 @@ import { IndexComponent } from './index/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FirstNamePipe } from './first-name.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -33,7 +35,7 @@ const routes: Routes = [
     NavigationComponent,
     FirstNamePipe
   ],
-  imports: [BrowserModule, HttpModule, FormsModule, RouterModule.forRoot(routes), BrowserAnimationsModule],
+  imports: [BrowserModule, HttpModule, FormsModule, RouterModule.forRoot(routes), BrowserAnimationsModule, ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })],
   providers: [],
   bootstrap: [AppComponent]
 })
