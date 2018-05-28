@@ -18,7 +18,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  { path: '', component: IndexComponent },
   { path: 'index', component: IndexComponent, data: { state: 'index' } },
   { path: 'places', component: PlacesComponent, data: { state: 'place' } },
   { path: 'group', component: GroupComponent, data: { state: 'group' } }
